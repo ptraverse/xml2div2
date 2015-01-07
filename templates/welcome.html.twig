@@ -6,30 +6,31 @@
 
 {% block head %}
     {{ parent() }}
-    <script type="text/javascript" src="/js/welcome.js"></script>
+    <script type="text/javascript" src="/js/json2html.js"></script>
+    <script type="text/javascript" src="/js/jquery.json2html.js"></script>
+    <script type="text/javascript" src="/js/welcome.js"></script>    
 {% endblock %}
 
 {% block content %}
-
-<div class="row">
-	<div id="response_div" class="col-md-4"></div>
-</div>
 
 <form class="form-horizontal" id="xml_form">
 <fieldset>
 
 <!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="xml_textarea">XML</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="xml_textarea" name="xml_textarea"></textarea>
+<div class="form-group">  
+<div class="col-md-3">
+</div>
+  <div class="col-md-6">                     
+    <textarea class="form-control" id="xml_textarea" name="xml_textarea" placeholder="Enter XML"></textarea>
   </div>
 </div>
 
+
 <!-- Button -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="convert_button"></label>
-  <div class="col-md-4">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6 text-center">
     <button id="convert_button" name="convert_button" class="btn btn-success">Convert</button>
   </div>
 </div>
@@ -37,6 +38,16 @@
 </fieldset>
 </form>
 
+<div class="row">
+	<div class="col-md-3">
+  	</div>
+	<div id="response_div" class="col-md-4"></div>
+</div>
 
+<div class="row">
+	<div class="col-md-3">
+  	</div>
+	<div id="render_div" class="col-md-4"></div>
+</div>
 
 {% endblock %}
